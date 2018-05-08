@@ -1,0 +1,153 @@
+#services h1, #services h3{
+    text-align: center;
+    font-weight: 400;
+    padding-bottom: 20px;
+    color: #72A541;
+}
+#services h3{
+
+    padding-top: 40px;
+}
+#services ul{
+    list-style: none;
+    font-size: 21px;
+}
+#services p{
+    padding: 5px 0px;
+}
+.widerContainer .largerText{
+    margin-top: 50px;
+}
+.largerText{
+    font-size: 22px;
+    font-weight: 400;
+}
+.testimonialS h3{
+    font-weight: 400;
+}
+.testimonialS h4{
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: .5px;
+    color:#72A541;
+}
+.testimonialS .info{
+    text-align: center;
+    font-weight: 300;    
+}
+.testimonialS .who{
+    text-align: right;
+    margin-right: 80px;
+    font-style: italic; 
+}
+#founder img{
+    padding: 5px;
+    border: 1px solid #d3d3d3;
+    display: inline-block;
+    margin-right: 20px;
+    float: right;
+}
+@media (max-width: 992px) {
+    #founder img {
+        display: block;
+        float: none;
+        margin: 0 auto 15px auto;
+    }
+}
+#founder h3{
+    color: #72A541;
+    font-weight: 400;
+    padding-bottom: 50px;
+    text-align: center;
+}
+#founder p{
+    font-size: 20px;
+}
+#founder .quoteName {
+    text-align: right;
+    font-style: italic;
+}
+h1, .h1{
+    font-size: 39px;
+    
+}
+h3,
+.h3 {
+  font-size: 30px;
+    
+}
+h4, .h4{
+    font-size: 24px
+}
+p{
+    font-size: 21px;
+}
+
+@media (max-width: 992px) {
+    h1, .h1{
+        font-size: 30px;
+
+    }
+    h3,
+    .h3 {
+      font-size: 24px;
+
+    }
+    h4, .h4{
+        font-size: 21px
+    }
+    p{
+        font-size: 19px;
+    }
+    #services ul{
+        list-style: none;
+        font-size: 20px;
+    }
+    #services li{
+        padding-bottom: 9px;
+    }
+    .largerText{
+        font-size: 20px;
+    }
+    #founder p{
+        font-size: 18px;
+    }
+}
+
+.block:not(.block-secondary) .lead {
+    font-size: 24px;
+  }
+
+@media screen and (max-width: 768px) {
+
+  .block:not(.block-secondary) .lead {
+    font-size: 24px;
+  }
+}
+
+.form-control{
+    font-size: 18px;
+}
+
+.widerContainer {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  .widerContainer {
+    width: 740px;
+  }
+}
+@media (min-width: 992px) {
+  .widerContainer {
+    width: 880px;
+  }
+}
+@media (min-width: 1200px) {
+  .widerContainer {
+    width: 75%;
+      margin: 0 auto;
+  }
+}
