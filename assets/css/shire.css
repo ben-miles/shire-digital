@@ -33,12 +33,12 @@
 }
 .testimonialS .info{
     text-align: center;
-    font-weight: 300;    
+    font-weight: 300;
 }
 .testimonialS .who{
     text-align: right;
     margin-right: 80px;
-    font-style: italic; 
+    font-style: italic;
 }
 #founder img{
     padding: 5px;
@@ -69,12 +69,12 @@
 }
 h1, .h1{
     font-size: 39px;
-    
+
 }
 h3,
 .h3 {
   font-size: 30px;
-    
+
 }
 h4, .h4{
     font-size: 24px
@@ -82,6 +82,12 @@ h4, .h4{
 p{
     font-size: 21px;
 }
+
+/**** new dev work 2018-05-08 ****/
+.block.app-block-intro {
+    background: url('../../assets/img/clouds-field-grass-53414-bw.jpg') 0% 0% / cover fixed;
+}
+/**** END new dev work 2018-05-08 ****/
 
 @media (max-width: 992px) {
     h1, .h1{
