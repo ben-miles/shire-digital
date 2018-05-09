@@ -122,6 +122,19 @@ p{
         margin: 0 20px 80px;
     }
 }
+.block.app-block-growing {
+    text-align: center;
+}
+.icon.icon-huge {
+    color: #ffffff;
+    font-size: 24rem;
+	line-height: 1;
+}
+@media (min-width: 992px) {
+    .block.app-block-growing {
+        text-align: left;
+    }
+}
 /**** END new dev work 2018-05-08 ****/
 
 @media (max-width: 992px) {
