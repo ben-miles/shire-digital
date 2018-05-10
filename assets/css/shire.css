@@ -135,6 +135,29 @@ p{
         text-align: left;
     }
 }
+.carousel .item h4 {
+    color: #72A541;
+    font-weight: 500;
+}
+.carousel .item p.info {
+    text-align: justify;
+}
+.carousel .badge-icon {
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    margin: 40px auto 0;
+    border: 4px solid #000000;
+    text-align: center;
+}
+.carousel .badge-icon .icon {
+    font-size: 4rem;
+    color: #72A541;
+}
+.carousel-indicators {
+    bottom: -50px;
+}
 /**** END new dev work 2018-05-08 ****/
 
 @media (max-width: 992px) {
