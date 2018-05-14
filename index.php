@@ -521,6 +521,9 @@
             <div class="col-xs-12 m-b-md">
                 <h3 style="color: #72A541; font-weight: 400; text-align: center;">We want to hear from you. It's never too soon. Ask us anything.</h3>
             </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div id="alertContainer"></div>
+            </div>
             <div class="col-xs-12 col-md-8 col-md-offset-2">
                 <form class="form-horizontal" id="contact-form">
                     <fieldset>
@@ -552,7 +555,7 @@
                         <div class="form-group">
                             <div class="col-md-12 inputGroupContainer">
                                 <div class="input-group">
-                                    <textarea class="form-control" id="msg-input" name="comment" placeholder="Tell Us About Your Project."></textarea>
+                                    <textarea class="form-control" id="msg-input" name="comment" placeholder="Tell Us About Your Project!"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -601,31 +604,81 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/toolkit.js"></script>
 <script src="assets/js/application.js"></script>
-<script>
-  $('#contact-form').on( "submit", function(e){
-    e.preventDefault();
 
-    var nameVal     = $('#name-input').val();
-    var emailVal    = $('#email-input').val();
-    var budgetVal   = $('#budget-input').val();
-    var messageVal  = $('#msg-input').val();
+<script>
+
+// DEV: Pre-fill the contact form TODO: remove
+// $( document ).ready( function() {
+//     $( '#name-input' ).val( 'Ben' );
+//     $( '#email-input' ).val( 'ben@shire-digital.com' );
+//     $( '#budget-input' ).val( '$100,000 to $400,000' );
+//     $( '#msg-input' ).val( 'I\'d like to build a neural net processor. A learning computer.' );
+// });
+
+// On Submit of Contact Form
+$( "#contact-form" ).on( "submit", function( e ) {
+    // Prevent any default/native routines
+    e.preventDefault();
+    // Gather form input data as JSON, declare feedback vars
+    var formData = $( this ).serializeArray(),
+        feedbackType,
+        feedbackTitle,
+        feedbackBody;
+    // Add "access" to formData to prevent crawlers & other drive-by submits
+    formData.push( { name: 'access', value: true } );
+    // Send formData to processing
     $.ajax({
-      url: "https://formspree.io/team@shire-digital.com",
-      method: "POST",
-      data: {"name": nameVal, "email": emailVal, "budget": budgetVal, "message": messageVal },
-      dataType: "json",
-      success: function(){
-        //alert('success!');
-        $('#contact-form-div').addClass('hidden');
-        $('#post-contact-div').removeClass('hidden');
-        $('#post-contact-div').addClass('show');
-      },
-      error: function(){
-        alert( 'An error occured while submitting your form. Please try again later or give us a call.' );
-      }
-    });
-  });
+        url: "assets/processing/contact.php",
+        type: "POST",
+        data: formData,
+        // Just before sending,
+            beforeSend: function(){
+                // Clear existing errors from the frontend
+                $( "#alertContainer" ).html( "" );
+            },
+        // After sending AND if there's an AJAX error,
+        error: function( xhr, status, errorThrown ){
+            feedbackType = "danger",
+            feedbackTitle = "Error!",
+            feedbackBody = "<p>There was an error submitting the form: <br/><strong>" + errorThrown + "</strong></p>";
+        },
+        // After sending AND if no AJAX error,
+        success: function( procData ){
+            // Split procData on "|" character, into "title" and "body"
+            procData = procData.split( "|" ),
+            feedbackType = ( procData[0] == "~s" ) ? "success" : "warning",
+            feedbackTitle = ( procData[0] == "~s" ) ? "Success!" : "Error!",
+            feedbackBody = ( procData[0] == "~s" ) ? "Your message has been sent. Thank you!" : procData[1];
+            // console.log(title);
+            // console.log( 'success: ' + procData );
+        },
+        // After sending AND error/success is evaluated,
+        complete: function(){
+            //Build feedback
+            var feedback = $( "<div>", { class: "alert alert-" + feedbackType, html: "<strong>" + feedbackTitle + " </strong>" + feedbackBody } );
+            // Send feedback to the frontend
+            $( "#alertContainer" ).html( feedback );
+            // If success, hide the form
+            if( feedbackType == "success" ) {
+                $( "#contact-form" ).hide();
+            }
+            // console.log( 'complete' );
+        }
+    })
+    //   done: function(procData){
+    //     console.log(procData);
+    //     $('#contact-form-div').addClass('hidden');
+    //     $('#post-contact-div').removeClass('hidden');
+    //     $('#post-contact-div').addClass('show');
+    //   },
+    //   error: function(){
+    //     alert( 'An error occured while submitting your form. Please try again later or give us a call.' );
+    //   }
+    // });
+
+});
 </script>
+
 <script>
 $(document).ready(function(){
     function logoResizing(){
@@ -638,10 +691,9 @@ $(document).ready(function(){
                 var newImgHeight = .50 * windowH;
                 $('.app-block-intro img').height(newImgHeight);
                 $('.app-block-intro img').width(newImgHeight);
-                $('.app-block-intro').css({'padding-top': '0px', 'margin-top': '0px', 'padding-bottom':'20px'});
+                $('.app-block-intro').css( {'padding-top': '0px', 'margin-top': '0px', 'padding-bottom': '20px'} );
                 // $('.block.shireIntro').css({'padding-top': '20px'});
             }
-
         }
     }
 
