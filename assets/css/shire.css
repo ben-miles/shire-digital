@@ -170,6 +170,18 @@ p{
     border-color: #72A541;
     margin: 0;
 }
+#contact-form input[type=text],
+#contact-form textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+}
+#contact-form input[type=text]:focus,
+#contact-form textarea:focus {
+    border: 1px solid #72A541;
+}
 /**** END new dev work 2018-05-08 ****/
 
 @media (max-width: 992px) {
