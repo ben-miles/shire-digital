@@ -204,11 +204,10 @@ p{
         width: 150px;
     }
 }
-.app-block-footer .copyright a {
-    /* padding: 0 5px; */
+.app-block-footer h6 a {
     border-bottom: 1px solid #72A541;
 }
-.app-block-footer .copyright a:hover {
+.app-block-footer h6 a:hover {
     color: rgb(27, 28, 29);
     background-color: #72A541;
     text-decoration: none;

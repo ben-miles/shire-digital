@@ -582,7 +582,7 @@
                 <a href="#" target="_self">
                     <img src="assets/img/svg_footer_shire.svg" class="img-responsive" alt="Shire Digital Solutions Logo" />
                 </a>
-                <h6 class="text-uppercase copyright">&copy; <?php echo date("Y"); ?> <a href="#" target="_self">SHIRE DIGITAL SOLUTIONS</a></h6>
+                <h6 class="text-uppercase">&copy; <?php echo date("Y"); ?> <a href="#" target="_self">SHIRE DIGITAL SOLUTIONS</a></h6>
             </div>
             <div class="col-md-4 text-center">
                 <img src="assets/img/svg_footer_florida.svg" class="img-responsive" alt="Space Coast, Florida" />
@@ -592,7 +592,7 @@
                 <a href="https://www.facebook.com/ShireDigitalSolutions/" target="_blank">
                     <img src="assets/img/svg_footer_facebook.svg" class="img-responsive" alt="Like us on Facebook: " />
                 </a>
-                <h6 class="text-uppercase ">Like us on Facebook!</h6>
+                <h6 class="text-uppercase ">Like us <a href="https://www.facebook.com/ShireDigitalSolutions/" target="_blank">on Facebook!</a></h6>
             </div>
         </div>
     </div>
