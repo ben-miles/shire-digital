@@ -121,6 +121,9 @@ p{
 .panel-icon .iconlist .icon {
     color: #72A541;
 }
+.panel-icon p {
+	font-size: 14px;
+}
 @media (min-width: 1200px) {
     .panel-icon {
         margin: 0 20px 80px;
