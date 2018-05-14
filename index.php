@@ -486,10 +486,10 @@
     <!-- Contact Form -->
     <div class="container" id="contact-form-div app-translate-15" data-transition="entrance">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 m-b-md">
                 <h3 style="color: #72A541; font-weight: 400; text-align: center;">We want to hear from you. It's never too soon. Ask us anything.</h3>
             </div>
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
                 <form class="form-horizontal" id="contact-form">
                     <fieldset>
                         <!-- Form Input: Name -->
@@ -527,7 +527,7 @@
                         <!-- Form Input: Button -->
                         <div class="form-group">
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-warning" style="background-color: #72A541; border-color: #72A541;">Send <span class="glyphicon glyphicon-send"></span></button>
+                                <button type="submit" class="btn" style="color: #ffffff; background-color: #72A541; border-color: #72A541;">Send <span class="glyphicon glyphicon-send"></span></button>
                             </div>
                         </div>
                     </fieldset>
