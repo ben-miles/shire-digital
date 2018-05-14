@@ -182,6 +182,37 @@ p{
 #contact-form textarea:focus {
     border: 1px solid #72A541;
 }
+.app-block-footer {
+	letter-spacing: .15em;
+}
+.app-block-footer .col-md-4 {
+	margin-bottom: 60px;
+}
+.app-block-footer .col-md-4:last-of-type {
+    margin-bottom: 0;
+}
+.app-block-footer img {
+    border: 0;
+    margin: 0 auto;
+    width: auto;
+}
+@media (min-width: 992px) {
+    .app-block-footer .col-md-4 {
+        margin-bottom: 0;
+    }
+    .app-block-footer img {
+        width: 150px;
+    }
+}
+.app-block-footer .copyright a {
+    /* padding: 0 5px; */
+    border-bottom: 1px solid #72A541;
+}
+.app-block-footer .copyright a:hover {
+    color: rgb(27, 28, 29);
+    background-color: #72A541;
+    text-decoration: none;
+}
 /**** END new dev work 2018-05-08 ****/
 
 @media (max-width: 992px) {

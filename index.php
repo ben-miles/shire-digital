@@ -206,12 +206,16 @@
             </div>
             <div class="col-xs-12">
                 <div id="carousel-testimonials" class="carousel carousel-light slide" data-ride="carousel">
+                    <!-- Navigation Dots -->
                     <ol class="carousel-indicators">
                         <li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel-testimonials" data-slide-to="1"></li>
                         <li data-target="#carousel-testimonials" data-slide-to="2"></li>
+                        <li data-target="#carousel-testimonials" data-slide-to="3"></li>
+                        <li data-target="#carousel-testimonials" data-slide-to="4"></li>
                     </ol>
                     <div class="carousel-inner" role="listbox">
+                        <!-- Slide #1 -->
                         <div class="item active">
                             <div class="row">
                                     <div class="col-xs-8 col-xs-offset-2">
@@ -224,6 +228,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Slide #2 -->
                         <div class="item">
                             <div class="row">
                                 <div class="col-xs-8 col-xs-offset-2">
@@ -237,6 +242,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Slide #3 -->
                         <div class="item">
                             <div class="row">
                                 <div class="col-xs-8 col-xs-offset-2">
@@ -246,6 +252,32 @@
                                         <span class="icon icon-user"></span>
                                     </div>
                                     <p class="who">- Rampit USA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide #4 -->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-xs-8 col-xs-offset-2">
+                                    <h4>Very professional</h4>
+                                    <p class="info">"Nick did a amazing job on my gym website! Working with Nick was a pleasure, he was able to answer all my questions and he's very professional. Highly Recommend it! Thank you!!"</p>
+                                    <div class="badge-icon">
+                                        <span class="icon icon-user"></span>
+                                    </div>
+                                    <p class="who">- Michael P.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide #5 -->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-xs-8 col-xs-offset-2">
+                                    <h4>Knowledge and expertise</h4>
+                                    <p class="info">"Working with Nick Fuller around a specific online marketing project was a terrific experience. Nick was very engaged, knew when to provide the right support and how to prepare me for the launch, handled all the tech seamlessly, and the results have been outstanding. Website views increased over 700%. Active audience reach was over 175k with actual engagement above 10k. All in less than 12 hours. I highly recommend Nick for your digital needs!"</p>
+                                    <div class="badge-icon">
+                                        <span class="icon icon-user"></span>
+                                    </div>
+                                    <p class="who">- Sara A.</p>
                                 </div>
                             </div>
                         </div>
@@ -546,11 +578,21 @@
 <div class="block app-block-footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 m-b">
-                <h6 class="text-uppercase">Space Coast, FL 32927</h6>
+            <div class="col-md-4 text-center">
+                <a href="#" target="_self">
+                    <img src="assets/img/svg_footer_shire.svg" class="img-responsive" alt="Shire Digital Solutions Logo" />
+                </a>
+                <h6 class="text-uppercase copyright">&copy; <?php echo date("Y"); ?> <a href="#" target="_self">SHIRE DIGITAL SOLUTIONS</a></h6>
             </div>
-            <div class="col-sm-6 text-right">
-                <h6 class="text-uppercase">&copy; <?php echo date("Y"); ?> SHIRE DIGITAL SOLUTIONS</h6>
+            <div class="col-md-4 text-center">
+                <img src="assets/img/svg_footer_florida.svg" class="img-responsive" alt="Space Coast, Florida" />
+                <h6 class="text-uppercase location">Space Coast, FL 32927</h6>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="https://www.facebook.com/ShireDigitalSolutions/" target="_blank">
+                    <img src="assets/img/svg_footer_facebook.svg" class="img-responsive" alt="Like us on Facebook: " />
+                </a>
+                <h6 class="text-uppercase ">Like us on Facebook!</h6>
             </div>
         </div>
     </div>
